@@ -10,7 +10,6 @@
 		16E100771BFEFB9900D70E3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E100761BFEFB9900D70E3A /* main.m */; };
 		16E1007A1BFEFB9900D70E3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E100791BFEFB9900D70E3A /* AppDelegate.m */; };
 		16E1007D1BFEFB9900D70E3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E1007C1BFEFB9900D70E3A /* ViewController.m */; };
-		16E100801BFEFB9900D70E3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E1007E1BFEFB9900D70E3A /* Main.storyboard */; };
 		16E100821BFEFB9900D70E3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E100811BFEFB9900D70E3A /* Images.xcassets */; };
 		16E100851BFEFB9900D70E3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E100831BFEFB9900D70E3A /* LaunchScreen.xib */; };
 		16E100911BFEFB9900D70E3A /* BlocBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E100901BFEFB9900D70E3A /* BlocBrowserTests.m */; };
@@ -34,7 +33,6 @@
 		16E100791BFEFB9900D70E3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		16E1007B1BFEFB9900D70E3A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		16E1007C1BFEFB9900D70E3A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		16E1007F1BFEFB9900D70E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16E100811BFEFB9900D70E3A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16E100841BFEFB9900D70E3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		16E1008A1BFEFB9900D70E3A /* BlocBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +83,6 @@
 				16E100791BFEFB9900D70E3A /* AppDelegate.m */,
 				16E1007B1BFEFB9900D70E3A /* ViewController.h */,
 				16E1007C1BFEFB9900D70E3A /* ViewController.m */,
-				16E1007E1BFEFB9900D70E3A /* Main.storyboard */,
 				16E100811BFEFB9900D70E3A /* Images.xcassets */,
 				16E100831BFEFB9900D70E3A /* LaunchScreen.xib */,
 				16E100741BFEFB9900D70E3A /* Supporting Files */,
@@ -168,6 +165,7 @@
 				TargetAttributes = {
 					16E100701BFEFB9900D70E3A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = T64J322ZU8;
 					};
 					16E100891BFEFB9900D70E3A = {
 						CreatedOnToolsVersion = 6.4;
@@ -199,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16E100801BFEFB9900D70E3A /* Main.storyboard in Resources */,
 				16E100851BFEFB9900D70E3A /* LaunchScreen.xib in Resources */,
 				16E100821BFEFB9900D70E3A /* Images.xcassets in Resources */,
 			);
@@ -244,14 +241,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		16E1007E1BFEFB9900D70E3A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				16E1007F1BFEFB9900D70E3A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		16E100831BFEFB9900D70E3A /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlocBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlocBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +409,7 @@
 				16E100961BFEFB9900D70E3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16E100971BFEFB9900D70E3A /* Build configuration list for PBXNativeTarget "BlocBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +418,7 @@
 				16E100991BFEFB9900D70E3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
