@@ -78,7 +78,6 @@
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
-    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -208,4 +207,5 @@
         [self.reloadButton addTarget:self.webView action:@selector(reloadButton) forControlEvents:UIControlEventTouchUpInside];
     }
 }
+
 @end

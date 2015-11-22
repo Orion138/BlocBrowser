@@ -17,12 +17,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Override point for customization after application launch
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
     [self.window makeKeyAndVisible];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Welcome"
+                                                                   message:@"This is an alert"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:okAction];
+    [self.window.rootViewController presentViewController:alert animated:TRUE completion:nil];
+    
     return YES;
 }
 
