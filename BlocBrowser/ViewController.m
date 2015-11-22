@@ -113,8 +113,15 @@
     NSURL *URL = [NSURL URLWithString:URLString];
     
     if (!URL.scheme) {
-        // The user didn't type http: or https:
-        URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", URLString]];
+        
+        NSString *urlNoSpace = [URLString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        
+//        if ([URLString rangeOfString:urlNoSpace].location == NSNotFound) {
+//            // The user didn't type http: or https:
+//            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", URLString]];
+//        } else {
+            // The user typed a space so we assume it's a search engine query
+        URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/search?q=%@", urlNoSpace]];
     }
     
     if (URL) {
