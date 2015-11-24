@@ -106,21 +106,21 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSString *URLString = textField.text;
-    
+    NSString *space = @" ";
     NSURL *URL = [NSURL URLWithString:URLString];
     
     if (!URL.scheme) {
-        
         NSString *urlNoSpace = [URLString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         
-//        if ([URLString rangeOfString:urlNoSpace].location == NSNotFound) {
-//            // The user didn't type http: or https:
-//            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", URLString]];
-//        } else {
+        if ([URLString rangeOfString:space].location == NSNotFound) {
+            // The user didn't type http: or https:
+            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.%@.com", URLString]];
+        } else {
             // The user typed a space so we assume it's a search engine query
-        URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/search?q=%@", urlNoSpace]];
+            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/search?q=%@", urlNoSpace]];
+        }
+        
     }
-    
     if (URL) {
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         [self.webView loadRequest:request];

@@ -26,7 +26,7 @@
     [self.window makeKeyAndVisible];
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Welcome"
-                                                                   message:@"This is an alert"
+                                                                   message:@"Tap OK to Continue"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
