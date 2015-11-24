@@ -112,8 +112,11 @@
     if (!URL.scheme) {
         NSString *urlNoSpace = [URLString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         
-        if ([URLString rangeOfString:space].location == NSNotFound) {
-            // The user didn't type http: or https:
+        if ([URLString rangeOfString:space].location == NSNotFound && [URLString containsString:@".com"]) {
+            // The user didn't type http:
+            URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.%@", URLString]];
+        } else if ([URLString rangeOfString:space].location == NSNotFound) {
+            // The user didn't type http: or .com
             URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.%@.com", URLString]];
         } else {
             // The user typed a space so we assume it's a search engine query
