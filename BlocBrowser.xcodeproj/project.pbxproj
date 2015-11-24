@@ -13,6 +13,7 @@
 		16E100821BFEFB9900D70E3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16E100811BFEFB9900D70E3A /* Images.xcassets */; };
 		16E100851BFEFB9900D70E3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16E100831BFEFB9900D70E3A /* LaunchScreen.xib */; };
 		16E100911BFEFB9900D70E3A /* BlocBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16E100901BFEFB9900D70E3A /* BlocBrowserTests.m */; };
+		2E1E82351C04E0FB0079D73A /* AwesomeFloatingToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E82341C04E0FB0079D73A /* AwesomeFloatingToolbar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		16E1008A1BFEFB9900D70E3A /* BlocBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E1008F1BFEFB9900D70E3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16E100901BFEFB9900D70E3A /* BlocBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocBrowserTests.m; sourceTree = "<group>"; };
+		2E1E82331C04E0FB0079D73A /* AwesomeFloatingToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeFloatingToolbar.h; sourceTree = "<group>"; };
+		2E1E82341C04E0FB0079D73A /* AwesomeFloatingToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeFloatingToolbar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				16E100791BFEFB9900D70E3A /* AppDelegate.m */,
 				16E1007B1BFEFB9900D70E3A /* ViewController.h */,
 				16E1007C1BFEFB9900D70E3A /* ViewController.m */,
+				2E1E82331C04E0FB0079D73A /* AwesomeFloatingToolbar.h */,
+				2E1E82341C04E0FB0079D73A /* AwesomeFloatingToolbar.m */,
 				16E100811BFEFB9900D70E3A /* Images.xcassets */,
 				16E100831BFEFB9900D70E3A /* LaunchScreen.xib */,
 				16E100741BFEFB9900D70E3A /* Supporting Files */,
@@ -219,6 +224,7 @@
 				16E1007D1BFEFB9900D70E3A /* ViewController.m in Sources */,
 				16E1007A1BFEFB9900D70E3A /* AppDelegate.m in Sources */,
 				16E100771BFEFB9900D70E3A /* main.m in Sources */,
+				2E1E82351C04E0FB0079D73A /* AwesomeFloatingToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
