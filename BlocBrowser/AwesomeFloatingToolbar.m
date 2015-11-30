@@ -161,4 +161,16 @@
     }
 }
 
+- (void)pinchFired:(UIPinchGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        
+    }
+}
+
+- (void)longPressFired:(UILongPressGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        
+    }
+}
+
 @end
