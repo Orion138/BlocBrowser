@@ -69,9 +69,9 @@
     [self addGestureRecognizer:self.tapGesture];
     self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panFired:)];
     [self addGestureRecognizer:self.panGesture];
-    self.pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchFired)];
+    self.pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchFired:)];
     [self addGestureRecognizer:self.pinchGesture];
-    self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired)];
+    self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
     [self addGestureRecognizer:self.longPressGesture];
     return self;
 }
@@ -162,14 +162,22 @@
 }
 
 - (void)pinchFired:(UIPinchGestureRecognizer *)recognizer {
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        
+    if (recognizer.state == UIGestureRecognizerStateChanged) {
+        NSLog(@"Pinch");
     }
 }
 
 - (void)longPressFired:(UILongPressGestureRecognizer *)recognizer {
     if (recognizer.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"LongPress");
         
+        self.colors = @[self.colors[1], self.colors[0], self.colors[3], self.colors[2]];
+        
+        for (int i=0; i<self.labels.count; i++) {
+            UILabel *label = self.labels[i];
+            label.backgroundColor = self.colors[i];
+        }
+            
     }
 }
 
