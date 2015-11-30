@@ -70,7 +70,7 @@
     [super viewWillLayoutSubviews];
     
     // First, calculate some dimensions
-    static const CGFloat itemHeight = 50;
+    static const CGFloat itemHeight = 30;
     CGFloat width = CGRectGetWidth(self.view.bounds);
     CGFloat browserHeight = CGRectGetHeight(self.view.bounds) - itemHeight;
     
@@ -188,6 +188,17 @@
         [self.webView stopLoading];
     } else if ([title isEqual:kWebBrowserRefreshString]) {
         [self.webView reload];
+    }
+}
+
+- (void) floatingToolbar:(AwesomeFloatingToolbar *)toolbar didTryToPanWithOffset:(CGPoint)offset {
+    CGPoint startingPoint = toolbar.frame.origin;
+    CGPoint newPoint = CGPointMake(startingPoint.x + offset.x, startingPoint.y + offset.y);
+    
+    CGRect potentialNewFrame = CGRectMake(newPoint.x, newPoint.y, CGRectGetWidth(toolbar.frame), CGRectGetHeight(toolbar.frame));
+    
+    if (CGRectContainsRect(self.view.bounds, potentialNewFrame)) {
+        toolbar.frame = potentialNewFrame;
     }
 }
 
