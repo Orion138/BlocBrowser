@@ -63,7 +63,8 @@
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activityIndicator];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.textField setDelegate:self];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -98,7 +99,7 @@
             // The user didn't type http: or .com
             URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.%@.com", URLString]];
         } else {
-            // The user typed a space so we assume it's a search engine query
+            // The user typed a space so assume it's a search engine query
             URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.google.com/search?q=%@", urlNoSpace]];
         }
         
@@ -107,6 +108,8 @@
         NSURLRequest *request = [NSURLRequest requestWithURL:URL];
         [self.webView loadRequest:request];
     }
+    
+    [textField resignFirstResponder];
     
     return NO;
 }

@@ -162,9 +162,22 @@
 }
 
 - (void)pinchFired:(UIPinchGestureRecognizer *)recognizer {
+    
     if (recognizer.state == UIGestureRecognizerStateChanged) {
-        NSLog(@"Pinch");
+        
+        float deltaScale = recognizer.scale;
+        
+        CGAffineTransform transform = CGAffineTransformScale(recognizer.view.transform, deltaScale, deltaScale);
+        
+        recognizer.view.transform = transform;
+        
+        recognizer.scale = 1;
+        
     }
+    //    if (recognizer.state == UIGestureRecognizerStateChanged) {
+//        NSLog(@"Pinch");
+//        
+//    }
 }
 
 - (void)longPressFired:(UILongPressGestureRecognizer *)recognizer {
